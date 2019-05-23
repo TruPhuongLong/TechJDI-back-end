@@ -1,7 +1,11 @@
 import express from 'express';
+import router from './routes/root-route';
 
 const port = process.env.PORT || 2345;
 const app = express();
+
+//router:
+app.use(router);
 
 //Global Error handler:
 app.use(function (err, req, res, next) {
